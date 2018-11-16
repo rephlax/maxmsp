@@ -1,0 +1,31 @@
+	public void inlet(int i)
+{
+	if ( i < 60 )
+		{
+		post( "C note! but an out of tune chord " ); //For some distinction in the sound.
+		outlet( 0, i + 6);
+		try {
+    	Thread.sleep(1000); // For a delay between notes
+		outlet( 0, i + 4); }
+   	    catch(InterruptedException e) {}
+		try {
+    	Thread.sleep(1000); // For a delay between notes
+		outlet( 0, i + 2); }
+    	catch(InterruptedException e) {}
+		{
+		post( "Bad Chords played!");
+		}
+	}
+else
+	{
+	post( "Chord in the note of " + 1);
+	outlet( 0, i + 4);
+	}
+if ( getInlet() == 1 )
+if ( velocity < 120 )
+	{
+	outlet( 1, i * 5 );
+   	}
+	velocity = i;
+	}
+}
